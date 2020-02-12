@@ -38,6 +38,10 @@ class Building
     Building.new(response.parse)
   end
 
+  def destroy
+    response = HTTP.delete("http://localhost:3000/api/buildings/#{self.id}")
+  end
+
 
   
 
